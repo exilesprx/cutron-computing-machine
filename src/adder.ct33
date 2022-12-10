@@ -1,0 +1,7 @@
+loop:
+    INP  x1
+    INP  x2
+    ADD  x3, x1, x2
+    OUT  x3
+    JMP loop
+    HLT
