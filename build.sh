@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t cutron:latest -f .docker/Dockerfile .
+docker build -t exilesprx/cutron-computing-machine:dev -f .docker/Dockerfile .
