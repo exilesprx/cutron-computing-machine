@@ -1,7 +1,7 @@
 FROM debian:bullseye-20221205-slim AS build
 
 RUN apt -y update \
-  && apt -y install git unzip wget
+  && apt -y install git unzip wget vim
 
 WORKDIR /opt/project
 
