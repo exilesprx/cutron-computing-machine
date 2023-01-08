@@ -1,4 +1,4 @@
-FROM debian:bullseye-20221205-slim AS build
+FROM debian:bullseye-20221219-slim AS build
 
 RUN apt -y update \
   && apt -y install git unzip wget vim
