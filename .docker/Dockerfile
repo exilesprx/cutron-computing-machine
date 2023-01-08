@@ -10,6 +10,6 @@ RUN wget https://github.com/ordovician/calcutron/releases/download/v4.0/calcutro
 RUN unzip -d /usr/local/bin/ calcutron-x86_64-linux.zip \
   && rm -rf calcutron-x86_64-linux.zip
 
-FROM build AS cutron
+FROM source AS cutron
 
 COPY src/ /opt/project/
