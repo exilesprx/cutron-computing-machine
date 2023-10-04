@@ -1,15 +1,16 @@
 FROM debian:bullseye-20230919-slim AS source
 
-RUN apt -y update \
-  && apt -y install git unzip wget vim
+RUN apt-get -y update \
+  && apt-get -y install --no-install-recommends unzip wget vim ca-certificates \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /opt/project
-
-RUN wget https://github.com/ordovician/calcutron/releases/download/v4.0/calcutron-x86_64-linux.zip
-
-RUN unzip -d /usr/local/bin/ calcutron-x86_64-linux.zip \
+RUN wget -q https://github.com/ordovician/calcutron/releases/download/v4.0/calcutron-x86_64-linux.zip \
+  && unzip -d /usr/local/bin/ calcutron-x86_64-linux.zip \
   && rm -rf calcutron-x86_64-linux.zip
 
-FROM source AS cutron
+FROM exilesprx/cutron:source AS main
 
 COPY src/ /opt/project/
+
+WORKDIR /opt/project
