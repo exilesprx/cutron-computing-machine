@@ -3,10 +3,7 @@
 {
 	"name": "Debian",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"build": {
-		"dockerfile": "../.docker/Dockerfile",
-		"target": "source"
-	}
+	"image": "exilesprx/cutron:source"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
