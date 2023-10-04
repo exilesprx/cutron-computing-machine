@@ -5,7 +5,7 @@ RUN apt-get -y update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://github.com/ordovician/calcutron/releases/download/v4.0/calcutron-x86_64-linux.zip \
+RUN wget -q https://github.com/ordovician/calcutron/releases/download/v4.0/calcutron-x86_64-linux.zip \
   && unzip -d /usr/local/bin/ calcutron-x86_64-linux.zip \
   && rm -rf calcutron-x86_64-linux.zip
 
