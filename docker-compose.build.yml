@@ -1,0 +1,17 @@
+services:
+
+  source:
+    image: exilesprx/cutron:source
+    build:
+      context: .docker
+      dockerfile: Dockerfile
+      target: source
+
+  main:
+    image: exilesprx/cutron:main
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+      target: main
+      cache_from:
+        - exilesprx/cutron:source
