@@ -1,1 +1,2 @@
-.dccache
+# ignore assembled machine code
+*.machine
