@@ -1,4 +1,4 @@
-FROM debian:bullseye-20240612-slim AS source
+FROM debian:bullseye-20240701-slim AS source
 
 RUN apt-get -y update \
   && apt-get -y install --no-install-recommends unzip wget vim ca-certificates \
