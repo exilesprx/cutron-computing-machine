@@ -1,4 +1,4 @@
-FROM debian:stable-20251103-slim AS source
+FROM debian:stable-20251117-slim AS source
 
 RUN apt-get -y update \
   && apt-get -y install --no-install-recommends unzip wget vim ca-certificates \
